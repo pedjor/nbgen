@@ -33,7 +33,7 @@
 <body>
 
 <div id="resultado">0</div>
-
+<div id="container"></div>
 <script>
     const probabilidade = 0.03; // exemplo: 3%
     let contador = 0;
@@ -45,9 +45,9 @@
             contador++;
         }
     }
-const container = document.getElementById("resultado");
     // mostrar resultado
     document.getElementById("resultado").textContent = contador;
+    const container = document.getElementById("container");
     // criar bolas
     for (let i = 0; i < contador; i++) {
         const bola = document.createElement("div");
