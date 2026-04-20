@@ -3,6 +3,20 @@
 <head>
     <title>Simulação de Probabilidade</title>
     <style>
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 400px;
+        margin: auto;
+        }
+
+      .bola {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: black;
+        margin: 2px;
+      }
         body {
             display: flex;
             justify-content: center;
@@ -31,9 +45,16 @@
             contador++;
         }
     }
-
+const container = document.getElementById("resultado");
     // mostrar resultado
     document.getElementById("resultado").textContent = contador;
+    // criar bolas
+    for (let i = 0; i < contador; i++) {
+        const bola = document.createElement("div");
+        bola.classList.add("bola");
+        container.appendChild(bola);
+}
+</script>
 </script>
 
 </body>
