@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulação de Probabilidade</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        #resultado {
+            font-size: 80px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div id="resultado">0</div>
+
+<script>
+    const probabilidade = 0.3; // exemplo: 30%
+    let contador = 0;
+
+    for (let i = 0; i < 1000; i++) {
+        let r = Math.random();
+
+        if (r < probabilidade) {
+            contador++;
+        }
+    }
+
+    // mostrar resultado
+    document.getElementById("resultado").textContent = contador;
+</script>
+
+</body>
+</html>
